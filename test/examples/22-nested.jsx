@@ -69,12 +69,12 @@ export default class NestedLayout extends React.Component<Props, State> {
     return _.map(renderLayouts||this.state.layouts, function(l, i) {
       //const isDraggable = l.i === "l2";
       return (
-        <div key={l.i} style={{ background: l.i.startsWith('l') ? 'yellow' : undefined }} className={l.i.startsWith('l') ? "layout" : ""}>
-          <div className={draggableHandle||"draggableField"} style={{background:'purple',color:'white'}} draggable={false}  >Drag</div>
+        <div key={l.i} style={{ background: l.i === 'l1' ? '#f7d046' : l.i === 'l2' ? '#2e7d32' : undefined }} className={l.i.startsWith('l') ? "layout" : ""}>
+          <div className={draggableHandle||"draggableField"} style={{background:'purple',color:'white',cursor:'move'}} draggable={false}  >Drag</div>
           {l.i.startsWith('l') ? (<>
             <ResponsiveReactGridLayout
             className="layout"
-            style={{height:'calc(100% - 21px)',background:'green',marginTop: 0}}
+            style={{height:'calc(100% - 21px)',background: l.i === 'l1' ? '#f7d046' : '#2e7d32',marginTop: 0}}
             cols={{ lg: l.w, md: l.w , sm: l.w , xs: l.w ,xxs:l.w  }}
             measureBeforeMount={false}
             containerPadding={[0, 0]}

@@ -19,6 +19,18 @@ RGL is React-only and does not require jQuery.
 
 > GIF from production usage on [BitMEX.com](https://www.bitmex.com)
 
+## Nested Layout Support
+
+This fork adds **nested grid layout** support: a grid item can itself be a
+fully-featured `<ResponsiveReactGridLayout>`, so you can drop sub-grids into the
+outer grid and drag/resizable widgets across layers.
+
+- Outer grid items can be dragged into / out of a nested sub-grid.
+- Each nested sub-grid keeps its own columns, layout and drop targets.
+- Widgets inside a sub-grid are draggable and resizable independently.
+
+![Nested Layout Demo](nested-demo.gif)
+
 [**[Demo](https://react-grid-layout.github.io/react-grid-layout/) | [Changelog](/CHANGELOG.md) | [CodeSandbox Editable demo](https://codesandbox.io/s/5wy3rz5z1x?module=%2Fsrc%2FShowcaseLayout.js)**]
 
 ## Table of Contents
@@ -61,6 +73,7 @@ RGL is React-only and does not require jQuery.
 1. [Allow Overlap](https://react-grid-layout.github.io/react-grid-layout/examples/19-allow-overlap.html)
 1. [All Resizable Handles](https://react-grid-layout.github.io/react-grid-layout/examples/20-resizable-handles.html)
 1. [Single Row Horizontal](https://react-grid-layout.github.io/react-grid-layout/examples/21-horizontal.html)
+1. [Nested Grids](test/examples/22-nested.jsx) — grid items that are themselves sub-grids
 
 #### Projects Using React-Grid-Layout
 

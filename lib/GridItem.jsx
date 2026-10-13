@@ -273,7 +273,7 @@ export default class GridItem extends React.Component<Props, State> {
   moveDroppingItem(prevProps: Props) {
     const { droppingPosition } = this.props;
     if (!droppingPosition) return;
-    console.log("preProps--------------AAGGGGG", prevProps, this.props);
+    //console.log("preProps--------------AAGGGGG", prevProps, this.props);
     const node = this.elementRef.current;
     // Can't find DOM node (are we unmounted?)
     if (!node) return;
